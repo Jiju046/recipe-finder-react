@@ -1,0 +1,87 @@
+body {
+  background-color: #a6bb8d;
+  font-family: "East Sea Dokdo", cursive;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.heading {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px+2vmin);
+}
+.ingredient {
+  background-color: white;
+  height: 300px;
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  /* h offset v offset blur radius spread rgba alpha opacity 0.0 to 1.0 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  margin: 30px;
+  transition: 0.4s;
+}
+.ingredient:hover {
+  height: 350px;
+  width: 300px;
+}
+.ingredient img {
+  height: 150px;
+  width: 180px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.ingredient p {
+  margin: 0;
+  font-size: 1rem;
+}
+.ingredient h1 {
+  font-size: 1.5rem;
+}
+.steps {
+  overflow-y: scroll;
+  position: relative;
+  top: 30px;
+  content-visibility: hidden;
+  /* in relative position from top */
+  transition: 0.4s;
+  opacity: 0;
+}
+.ingredient:hover .steps {
+  content-visibility: initial;
+  top: 0px;
+  opacity: 1;
+}
+
+.inputWrapper input {
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 5px;
+  padding-left: 30px;
+  margin: 30px;
+}
+
+.inputWrapper button {
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+}
